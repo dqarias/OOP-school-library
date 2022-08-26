@@ -11,5 +11,3 @@ class Teacher < Person
   end
 end
 
-teacher1 = Teacher.new(40, 'Math', 'Ronaldo')
-p teacher1

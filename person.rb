@@ -42,13 +42,5 @@ class Person < Nameable
   end
 end
 
-person1 = Person.new(16, 'Ronald', parent_permission: false)
-p person1
-puts person1.can_use_services?
 
-person = Person.new(22, 'maximilianus')
-puts person.correct_name
-puts capitalized_person = CapitalizeDecorator.new(person)
-puts capitalized_person.correct_name
-puts capitalized_trimmed_person = TrimmerDecorator.new(capitalized_person)
-puts capitalized_trimmed_person.correct_name
+
