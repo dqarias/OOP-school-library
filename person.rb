@@ -41,6 +41,3 @@ class Person < Nameable
     Rental.new(date, self, book)
   end
 end
-
-
-

@@ -82,13 +82,14 @@ class App
     name = gets.chomp
     puts 'Parent Permission Y or N:'
     permission = gets.chomp
-    if permission.upcase == "Y"
-         parent_permission = true
-    elsif permission.upcase == "N"
-        parent_permission = false
+    case permission.upcase
+    when 'Y'
+      parent_permission = true
+    when 'N'
+      parent_permission = false
     else
-        puts "Enter a valid option"
-        create_student
+      puts 'Enter a valid option'
+      create_student
     end
     @people.push(Student.new(age, classroom, name, parent_permission: parent_permission))
     puts 'Person created successfully'
@@ -156,13 +157,14 @@ class App
   def quit
     puts 'Do you want to leave Y or N'
     quit_app = gets.chomp
-    if quit_app.upcase == "Y"
-        puts "Thanks for use this app"
-    elsif quit_app.upcase == "N"
-        init
+    case quit_app.upcase
+    when 'Y'
+      puts 'Thanks for use this app'
+    when 'N'
+      init
     else
-        puts "Enter a valid option"
-        quit
+      puts 'Enter a valid option'
+      quit
     end
   end
 end
