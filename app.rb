@@ -60,8 +60,8 @@ class App
   end
 
   def create_person
-    puts 'Do you want to create a student (1) or a techer (2)? [Input the number]'
-    option_person = gets.chomp.to_i
+    puts 'Do you want to create a student (1) or a teacher (2)? [Input the number]'
+    option_person = gets.chomp
     case option_person
     when 1
       create_student
@@ -144,7 +144,7 @@ class App
     puts 'No data yet' if @rentals.empty?
     puts 'ID of Person:'
     person_id = gets.chomp.to_i
-    person_selected = @people.select { |person| person.id == person_id }
+    person_selected = @people.find { |person| person.id == person_id }
     puts 'The user ID does not exist'
     puts 'Rentals:' if person_selected.rentals.empty?
     rental_selected = person_selected.rentals
